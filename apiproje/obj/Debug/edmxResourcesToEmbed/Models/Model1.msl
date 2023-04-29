@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="appprojeModelStoreContainer" CdmEntityContainer="appprojeEntities">
+    <EntitySetMapping Name="Bloklars">
+      <EntityTypeMapping TypeName="appprojeModel.Bloklar">
+        <MappingFragment StoreEntitySet="Bloklar">
+          <ScalarProperty Name="BlokNo" ColumnName="BlokNo" />
+          <ScalarProperty Name="Magazalar" ColumnName="Magazalar" />
+          <ScalarProperty Name="MagazaSayisi" ColumnName="MagazaSayisi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gorevlers">
+      <EntityTypeMapping TypeName="appprojeModel.Gorevler">
+        <MappingFragment StoreEntitySet="Gorevler">
+          <ScalarProperty Name="GorevNo" ColumnName="GorevNo" />
+          <ScalarProperty Name="Gorevler1" ColumnName="Gorevler" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hizmetlers">
+      <EntityTypeMapping TypeName="appprojeModel.Hizmetler">
+        <MappingFragment StoreEntitySet="Hizmetler">
+          <ScalarProperty Name="HizmetNo" ColumnName="HizmetNo" />
+          <ScalarProperty Name="Hizmetler1" ColumnName="Hizmetler" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personellers">
+      <EntityTypeMapping TypeName="appprojeModel.Personeller">
+        <MappingFragment StoreEntitySet="Personeller">
+          <ScalarProperty Name="PersonelNo" ColumnName="PersonelNo" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Meslek" ColumnName="Meslek" />
+          <ScalarProperty Name="Pozisyon" ColumnName="Pozisyon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plazalars">
+      <EntityTypeMapping TypeName="appprojeModel.Plazalar">
+        <MappingFragment StoreEntitySet="Plazalar">
+          <ScalarProperty Name="PlazaNo" ColumnName="PlazaNo" />
+          <ScalarProperty Name="PlazaAdi" ColumnName="PlazaAdi" />
+          <ScalarProperty Name="Bolum" ColumnName="Bolum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

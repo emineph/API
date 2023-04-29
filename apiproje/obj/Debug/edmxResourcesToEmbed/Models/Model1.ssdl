@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="appprojeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bloklar">
+    <Key>
+      <PropertyRef Name="BlokNo" />
+    </Key>
+    <Property Name="BlokNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Magazalar" Type="varchar" MaxLength="50" />
+    <Property Name="MagazaSayisi" Type="int" />
+  </EntityType>
+  <EntityType Name="Gorevler">
+    <Key>
+      <PropertyRef Name="GorevNo" />
+    </Key>
+    <Property Name="GorevNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gorevler" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Hizmetler">
+    <Key>
+      <PropertyRef Name="HizmetNo" />
+    </Key>
+    <Property Name="HizmetNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Hizmetler" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Personeller">
+    <Key>
+      <PropertyRef Name="PersonelNo" />
+    </Key>
+    <Property Name="PersonelNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="varchar" MaxLength="50" />
+    <Property Name="Meslek" Type="varchar" MaxLength="50" />
+    <Property Name="Pozisyon" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Plazalar">
+    <Key>
+      <PropertyRef Name="PlazaNo" />
+    </Key>
+    <Property Name="PlazaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlazaAdi" Type="varchar" MaxLength="50" />
+    <Property Name="Bolum" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="appprojeModelStoreContainer">
+    <EntitySet Name="Bloklar" EntityType="Self.Bloklar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gorevler" EntityType="Self.Gorevler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hizmetler" EntityType="Self.Hizmetler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Plazalar" EntityType="Self.Plazalar" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

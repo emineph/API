@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="appprojeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bloklar">
+          <Key>
+            <PropertyRef Name="BlokNo" />
+          </Key>
+          <Property Name="BlokNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Magazalar" Type="varchar" MaxLength="50" />
+          <Property Name="MagazaSayisi" Type="int" />
+        </EntityType>
+        <EntityType Name="Gorevler">
+          <Key>
+            <PropertyRef Name="GorevNo" />
+          </Key>
+          <Property Name="GorevNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gorevler" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Hizmetler">
+          <Key>
+            <PropertyRef Name="HizmetNo" />
+          </Key>
+          <Property Name="HizmetNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Hizmetler" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Personeller">
+          <Key>
+            <PropertyRef Name="PersonelNo" />
+          </Key>
+          <Property Name="PersonelNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdSoyad" Type="varchar" MaxLength="50" />
+          <Property Name="Meslek" Type="varchar" MaxLength="50" />
+          <Property Name="Pozisyon" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Plazalar">
+          <Key>
+            <PropertyRef Name="PlazaNo" />
+          </Key>
+          <Property Name="PlazaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlazaAdi" Type="varchar" MaxLength="50" />
+          <Property Name="Bolum" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="appprojeModelStoreContainer">
+          <EntitySet Name="Bloklar" EntityType="Self.Bloklar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gorevler" EntityType="Self.Gorevler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hizmetler" EntityType="Self.Hizmetler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Plazalar" EntityType="Self.Plazalar" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="appprojeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bloklar">
+          <Key>
+            <PropertyRef Name="BlokNo" />
+          </Key>
+          <Property Name="BlokNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Magazalar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MagazaSayisi" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Gorevler">
+          <Key>
+            <PropertyRef Name="GorevNo" />
+          </Key>
+          <Property Name="GorevNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gorevler1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Hizmetler">
+          <Key>
+            <PropertyRef Name="HizmetNo" />
+          </Key>
+          <Property Name="HizmetNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Hizmetler1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Personeller">
+          <Key>
+            <PropertyRef Name="PersonelNo" />
+          </Key>
+          <Property Name="PersonelNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Meslek" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pozisyon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Plazalar">
+          <Key>
+            <PropertyRef Name="PlazaNo" />
+          </Key>
+          <Property Name="PlazaNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlazaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Bolum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="appprojeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bloklars" EntityType="Self.Bloklar" />
+          <EntitySet Name="Gorevlers" EntityType="Self.Gorevler" />
+          <EntitySet Name="Hizmetlers" EntityType="Self.Hizmetler" />
+          <EntitySet Name="Personellers" EntityType="Self.Personeller" />
+          <EntitySet Name="Plazalars" EntityType="Self.Plazalar" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="appprojeModelStoreContainer" CdmEntityContainer="appprojeEntities">
+          <EntitySetMapping Name="Bloklars">
+            <EntityTypeMapping TypeName="appprojeModel.Bloklar">
+              <MappingFragment StoreEntitySet="Bloklar">
+                <ScalarProperty Name="BlokNo" ColumnName="BlokNo" />
+                <ScalarProperty Name="Magazalar" ColumnName="Magazalar" />
+                <ScalarProperty Name="MagazaSayisi" ColumnName="MagazaSayisi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gorevlers">
+            <EntityTypeMapping TypeName="appprojeModel.Gorevler">
+              <MappingFragment StoreEntitySet="Gorevler">
+                <ScalarProperty Name="GorevNo" ColumnName="GorevNo" />
+                <ScalarProperty Name="Gorevler1" ColumnName="Gorevler" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hizmetlers">
+            <EntityTypeMapping TypeName="appprojeModel.Hizmetler">
+              <MappingFragment StoreEntitySet="Hizmetler">
+                <ScalarProperty Name="HizmetNo" ColumnName="HizmetNo" />
+                <ScalarProperty Name="Hizmetler1" ColumnName="Hizmetler" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personellers">
+            <EntityTypeMapping TypeName="appprojeModel.Personeller">
+              <MappingFragment StoreEntitySet="Personeller">
+                <ScalarProperty Name="PersonelNo" ColumnName="PersonelNo" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Meslek" ColumnName="Meslek" />
+                <ScalarProperty Name="Pozisyon" ColumnName="Pozisyon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Plazalars">
+            <EntityTypeMapping TypeName="appprojeModel.Plazalar">
+              <MappingFragment StoreEntitySet="Plazalar">
+                <ScalarProperty Name="PlazaNo" ColumnName="PlazaNo" />
+                <ScalarProperty Name="PlazaAdi" ColumnName="PlazaAdi" />
+                <ScalarProperty Name="Bolum" ColumnName="Bolum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

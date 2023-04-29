@@ -1,0 +1,39 @@
+﻿@model IEnumerable<mvcplaza.Models.BlokModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "EY")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Magazalar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MagazaSayisi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Magazalar)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MagazaSayisi)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "EY", new { id = item.BlokNo }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.BlokNo })
+    </td>
+</tr>
+}
+
+</table>
